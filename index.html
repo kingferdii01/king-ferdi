@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}.container{width:min(var(--max),90%);margin
 h1{font-family:"Space Grotesk";font-size:clamp(58px,9vw,126px);line-height:.86;letter-spacing:-.075em;margin:25px 0}
 .gradient{background:linear-gradient(100deg,#fff 10%,#aaa 48%,#b7ff43 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{font-size:18px;color:#a9a9ae;max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 20px;border:1px solid #303035;border-radius:999px;font-size:13px;font-weight:700}.btn.primary{background:var(--accent);color:#090909;border-color:var(--accent)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid #4a4a50;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.01em;background:#151517;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);background:#1d1d20;border-color:#707078;box-shadow:0 12px 30px rgba(0,0,0,.28)}.btn.primary{background:var(--accent);color:#090909;border-color:var(--accent);box-shadow:0 8px 28px rgba(183,255,67,.18)}.btn.primary:hover{background:#c5ff63;border-color:#c5ff63;box-shadow:0 12px 34px rgba(183,255,67,.25)}
 .hero-photo{position:relative;max-width:460px;margin-left:auto}.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:30px;display:block;filter:none}
 .hero-photo:before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid #303035;border-radius:30px;z-index:-1}.orb{display:none}
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;color:#777;font-size:11px;text-transform:uppercase;letter-spacing:.2em}.marquee-track{display:inline-block;animation:scroll 24s linear infinite}.marquee span{margin:0 25px;color:#aaa}@keyframes scroll{to{transform:translateX(-50%)}}
@@ -33,14 +33,158 @@ section{padding:120px 0}.section-head{display:flex;justify-content:space-between
 .about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:10%;align-items:start}.bigquote{font:500 clamp(30px,4vw,52px)/1.05 "Space Grotesk";letter-spacing:-.045em}.about-copy p{color:#a5a5ab;font-size:16px;line-height:1.85}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.stat{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:18px}.stat b{font:700 34px "Space Grotesk"}.stat small{display:block;color:#777;margin-top:5px}
 .experience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.exp-card{position:relative;padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#111113,#0b0b0c);overflow:hidden;transition:.25s}.exp-card:hover{transform:translateY(-4px);border-color:#444}.exp-card.featured{grid-row:span 2;background:linear-gradient(145deg,#151617,#0b0b0c)}.exp-card:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-70px;top:-70px;background:radial-gradient(circle,rgba(183,255,67,.14),transparent 68%);pointer-events:none}.exp-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.exp-period{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#777}.exp-index{font:700 12px "Space Grotesk";color:#555}.exp-card h3{margin:0;font:600 clamp(25px,3vw,38px)/1 "Space Grotesk";letter-spacing:-.04em}.exp-summary{color:#8f8f95;margin:10px 0 20px;max-width:480px;line-height:1.6;font-size:14px}.role-chips{display:flex;flex-wrap:wrap;gap:7px}.role-chips span,.role-label{display:inline-flex;border:1px solid #2d2d31;border-radius:999px;padding:7px 10px;color:#c9c9cd;font-size:11px;background:rgba(255,255,255,.02)}.role-label{color:#b7ff43;border-color:rgba(183,255,67,.25)}
-.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{min-height:300px;border:1px solid var(--line);border-radius:24px;padding:25px;background:linear-gradient(145deg,#121214,#0b0b0c);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.project:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(124,92,255,.12);filter:blur(30px);right:-60px;top:-60px}.project:nth-child(2):after{background:rgba(183,255,67,.12)}.project:nth-child(3):after{background:rgba(0,180,255,.12)}.project .num{color:#666;font:700 12px "Space Grotesk"}.project h3{font:600 28px "Space Grotesk";margin:15px 0 8px}.project p{color:#888;font-size:14px}.project a{font-size:12px;font-weight:700;color:#ddd}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{min-height:300px;border:1px solid var(--line);border-radius:24px;padding:25px;background:linear-gradient(145deg,#121214,#0b0b0c);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.project:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(124,92,255,.12);filter:blur(30px);right:-60px;top:-60px}.project:nth-child(2):after{background:rgba(183,255,67,.12)}.project:nth-child(3):after{background:rgba(0,180,255,.12)}.project .num{color:#666;font:700 12px "Space Grotesk"}.project h3{font:600 28px "Space Grotesk";margin:15px 0 8px}.project p{color:#888;font-size:14px}.project a{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;min-height:44px;padding:10px 14px;border:1px solid #3c3c42;border-radius:999px;background:#151517;color:#fff;font-size:12px;font-weight:800;transition:.2s}.project a:hover{background:var(--accent);border-color:var(--accent);color:#090909;transform:translateY(-2px)}
 .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.content-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:#0c0c0e}.content-card h3{font:600 28px "Space Grotesk";margin:0 0 10px}.content-card p{color:#929298}.content-list{list-style:none;padding:0;margin:22px 0 0}.content-list li{padding:12px 0;border-top:1px solid var(--line);font-size:13px;color:#c3c3c7;display:flex;justify-content:space-between}.content-list span{color:#6f6f75}
 .skills{display:flex;flex-wrap:wrap;gap:10px}.skill{border:1px solid #303035;border-radius:999px;padding:12px 16px;color:#d1d1d4;font-size:13px;background:#0c0c0e}.skill strong{color:var(--accent);margin-right:7px}
 .socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.social{border:1px solid var(--line);padding:22px;border-radius:18px;transition:.25s}.social:hover{transform:translateY(-4px);border-color:#555}.social b{font-family:"Space Grotesk";font-size:18px}.social small{display:block;color:#777;margin-top:5px}
-.contact{border:1px solid var(--line);border-radius:32px;padding:70px;position:relative;overflow:hidden;background:linear-gradient(130deg,#111113,#0b0b0c)}.contact:after{content:"";position:absolute;width:400px;height:400px;right:-180px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(183,255,67,.16),transparent 65%)}.contact h2{font:600 clamp(48px,8vw,96px)/.9 "Space Grotesk";letter-spacing:-.065em;max-width:800px;margin:12px 0 25px}.contact p{color:#888;max-width:550px}.email{display:inline-block;margin-top:20px;font:600 18px "Space Grotesk";border-bottom:1px solid #555;padding-bottom:6px}
+.contact{border:1px solid var(--line);border-radius:32px;padding:70px;position:relative;overflow:hidden;background:linear-gradient(130deg,#111113,#0b0b0c)}.contact:after{content:"";position:absolute;width:400px;height:400px;right:-180px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(183,255,67,.16),transparent 65%)}.contact h2{font:600 clamp(48px,8vw,96px)/.9 "Space Grotesk";letter-spacing:-.065em;max-width:800px;margin:12px 0 25px}.contact p{color:#888;max-width:550px}.email{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:20px;padding:12px 18px;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:#090909;font:700 16px "Space Grotesk";box-shadow:0 8px 28px rgba(183,255,67,.16);transition:.2s}.email:hover{transform:translateY(-2px);background:#c5ff63}
 footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px;display:flex;justify-content:space-between}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
 @media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:130px}.hero-photo{margin:30px auto 0}.about-grid,.content-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.experience-grid{grid-template-columns:1fr}.exp-card.featured{grid-row:auto}.socials{grid-template-columns:1fr 1fr}.exp{grid-template-columns:1fr;gap:5px}.section-head{display:block}.section-head p{margin-top:18px}.contact{padding:42px 25px}.stats{grid-template-columns:1fr}.hero p{font-size:16px}}
+
+
+@media(max-width:600px){
+  .container{width:min(100% - 32px,var(--max))}
+  .nav{top:10px;width:calc(100% - 24px);padding:9px 10px 9px 15px}
+  .brand{font-size:14px}
+  .navcta{min-height:42px;display:inline-flex;align-items:center;padding:9px 14px;font-size:12px;background:var(--accent);font-weight:800}
+  .hero{min-height:auto;padding:118px 0 58px;gap:24px}
+  .kicker{font-size:10px;padding:7px 10px;letter-spacing:.12em}
+  h1{font-size:clamp(48px,15vw,72px);line-height:.9;letter-spacing:-.065em;margin:20px 0}
+  .hero p{font-size:15px;line-height:1.7}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .actions .btn{width:100%;min-height:50px;font-size:13px}
+  .hero-photo{width:min(100%,360px);margin:28px auto 0}
+  .hero-photo img{border-radius:22px}
+  .hero-photo:before{inset:-10px 10px 10px -10px;border-radius:22px}
+  section{padding:78px 0}
+  .section-head{margin-bottom:28px}
+  .section-head h2{font-size:clamp(36px,11vw,52px)}
+  .section-head p{font-size:14px;line-height:1.65}
+  .stats{gap:9px;margin-top:24px}
+  .stat{padding:18px;border-radius:16px}
+  .experience-grid,.portfolio,.content-grid{gap:10px}
+  .exp-card,.project,.content-card{padding:20px;border-radius:18px}
+  .exp-card h3{font-size:28px}
+  .project{min-height:270px}
+  .project h3{font-size:25px}
+  .project a{width:100%;min-height:46px}
+  .skills{gap:7px}
+  .skill{padding:10px 12px;font-size:12px}
+  .socials{gap:9px}
+  .social{padding:18px 15px;border-radius:16px}
+  .social b{font-size:16px}
+  .contact{padding:34px 20px;border-radius:24px}
+  .contact h2{font-size:clamp(44px,13vw,66px)}
+  .contact p{font-size:14px;line-height:1.7}
+  .email{width:100%;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  footer{gap:10px;flex-direction:column;padding:22px 0;font-size:10px}
+}
+
+@media(max-width:380px){
+  .container{width:calc(100% - 24px)}
+  .nav{width:calc(100% - 16px)}
+  h1{font-size:46px}
+  .socials{grid-template-columns:1fr}
+}
+
+/* Mobile polish */
+@media (max-width: 600px){
+  html{scroll-behavior:smooth}
+  body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  .container{width:calc(100% - 28px);max-width:none}
+
+  .nav{
+    position:fixed;z-index:50;
+    top:10px;left:50%;transform:translateX(-50%);
+    width:calc(100% - 20px);max-width:560px;
+    min-height:50px;padding:7px 8px 7px 14px;
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(12,12,14,.82);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    box-shadow:0 12px 34px rgba(0,0,0,.30)
+  }
+  .brand{letter-spacing:-.02em}
+  .navcta{
+    min-height:40px;padding:9px 15px;
+    border-radius:999px;
+    box-shadow:0 5px 18px rgba(183,255,67,.15)
+  }
+
+  .hero{padding-top:112px;padding-bottom:64px;min-height:0}
+  .hero .kicker{margin-bottom:12px}
+  h1{
+    font-size:clamp(48px,15.2vw,70px);
+    line-height:.91;
+    letter-spacing:-.075em;
+    max-width:8ch
+  }
+  .hero p{max-width:34rem;font-size:15px;line-height:1.7}
+  .actions{gap:9px;margin-top:25px}
+  .actions .btn{
+    width:100%;min-height:52px;
+    font-size:13px;letter-spacing:.01em
+  }
+  .actions .btn.primary{box-shadow:0 10px 30px rgba(183,255,67,.20)}
+
+  .hero-photo{margin-top:30px}
+  .hero-photo img{width:100%;display:block}
+  section{padding:70px 0}
+  .section-head{margin-bottom:25px}
+  .section-head h2{
+    font-size:clamp(36px,11.5vw,54px);
+    line-height:.96;letter-spacing:-.055em
+  }
+  .section-head p{font-size:14px;line-height:1.7}
+
+  .stats{grid-template-columns:repeat(3,1fr);gap:7px}
+  .stat{padding:16px 10px}
+  .stat strong{font-size:20px}
+  .stat span{font-size:10px;line-height:1.35}
+
+  .experience-grid,.portfolio,.content-grid{grid-template-columns:1fr;gap:10px}
+  .exp-card,.project,.content-card{padding:20px}
+  .exp-card h3{font-size:27px;letter-spacing:-.04em}
+  .exp-card p,.project p,.content-card p{font-size:13px;line-height:1.65}
+  .project{min-height:0}
+  .project a{width:100%;min-height:46px;margin-top:10px}
+
+  .skills{gap:7px}
+  .skill{font-size:11px;padding:9px 11px}
+
+  .socials{grid-template-columns:1fr 1fr;gap:8px}
+  .social{padding:17px 14px}
+  .social small{font-size:10px}
+
+  .contact{
+    padding:31px 19px;
+    border-radius:22px
+  }
+  .contact h2{
+    font-size:clamp(43px,13vw,64px);
+    line-height:.92
+  }
+  .email{
+    width:100%;min-height:50px;
+    font-size:14px;
+    padding:12px 15px
+  }
+
+  footer{padding:25px 0 30px;line-height:1.5}
+}
+
+@media (max-width:390px){
+  .container{width:calc(100% - 24px)}
+  .nav{width:calc(100% - 14px)}
+  .brand{font-size:13px}
+  .navcta{font-size:11px;padding-inline:13px}
+  h1{font-size:46px}
+  .stats{gap:5px}
+  .stat{padding:14px 7px}
+  .stat strong{font-size:18px}
+  .socials{grid-template-columns:1fr}
+}
+
 </style>
 <meta name="description" content="KING FERDI — Web3 professional specializing in community, content, social media, partnerships, and Web3 growth.">
 <meta name="keywords" content="KING FERDI, Web3, crypto, blockchain, community manager, social media, content creator, KOL partnership, Web3 Indonesia">
@@ -61,6 +205,119 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px
 <meta name="twitter:title" content="KING FERDI — Web3 Professional">
 <meta name="twitter:description" content="Web3 professional portfolio — community, content, social media, partnerships & growth.">
 <meta name="twitter:image" content="https://kingferdi.vercel.app/og-image.svg">
+
+<style>
+.btn,.navcta,.project a,.social,.email{ -webkit-tap-highlight-color:transparent }
+.btn:focus-visible,.navcta:focus-visible,.project a:focus-visible,.social:focus-visible,.email:focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px
+}
+@media (max-width:600px){
+  .btn:active,.navcta:active,.project a:active,.social:active,.email:active{transform:scale(.98)}
+}
+</style>
+
+<style>
+/* Floating section navigation */
+.floating-nav{
+  position:fixed;
+  right:18px;
+  bottom:22px;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+  font-family:inherit;
+}
+.floating-toggle{
+  width:54px;
+  height:54px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:50%;
+  background:var(--accent);
+  color:#090909;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 12px 32px rgba(0,0,0,.35),0 5px 22px rgba(183,255,67,.18);
+  transition:transform .2s ease,box-shadow .2s ease;
+  font-size:20px;
+  font-weight:900;
+}
+.floating-toggle:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 16px 38px rgba(0,0,0,.4),0 7px 28px rgba(183,255,67,.25);
+}
+.floating-toggle:active{transform:scale(.96)}
+.floating-toggle .close-icon{display:none}
+.floating-nav.open .floating-toggle .menu-icon{display:none}
+.floating-nav.open .floating-toggle .close-icon{display:block}
+.floating-links{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:7px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px) scale(.96);
+  transform-origin:bottom right;
+  pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease,visibility .2s ease;
+}
+.floating-nav.open .floating-links{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+.floating-link{
+  min-width:126px;
+  min-height:42px;
+  padding:10px 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  background:rgba(16,16,18,.88);
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.01em;
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 8px 22px rgba(0,0,0,.22);
+  transition:background .18s ease,color .18s ease,transform .18s ease,border-color .18s ease;
+}
+.floating-link:hover{
+  background:var(--accent);
+  color:#090909;
+  border-color:var(--accent);
+  transform:translateX(-3px);
+}
+.floating-link span:last-child{font-size:11px;opacity:.55}
+.floating-link:hover span:last-child{opacity:.8}
+.floating-link:focus-visible,.floating-toggle:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+@media(max-width:600px){
+  .floating-nav{right:13px;bottom:16px}
+  .floating-toggle{width:50px;height:50px;font-size:18px}
+  .floating-link{
+    min-width:118px;
+    min-height:40px;
+    padding:9px 13px;
+    font-size:11px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .floating-links,.floating-toggle,.floating-link{transition:none}
+}
+</style>
 </head>
 <body>
 <nav class="nav">
@@ -93,13 +350,13 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px
 </section>
 
 <section id="experience" class="container reveal">
-  <div class="section-head"><div><div class="eyebrow">Experience</div><h2>A focused<br>Web3 journey.</h2></div><p>Selected experience across community, content, partnerships and Web3 growth.</p></div>
+  <div class="section-head"><div><div class="eyebrow">02 / Experience</div><h2>A focused<br>Web3 journey.</h2></div><p>Selected experience across community, content, partnerships and Web3 growth.</p></div>
   <div class="experience-grid">
-    <article class="exp-card"><div class="exp-top"><span class="exp-index"></span></div><h3>Airdrop One</h3><p class="exp-summary">Founder focused on Web3 community development.</p><div class="role-label">Founder · Community Development</div></article>
-    <article class="exp-card"><div class="exp-top"><span class="exp-index"></span></div><h3>Bitget Wallet</h3><p class="exp-summary">Community, education, social media & creator leadership.</p><div class="role-chips"><span>Streamer Leader</span><span>Social Media Manager</span><span>SEA Teacher Leader</span><span>KOC Manager</span></div></article>
-    <article class="exp-card"><div class="exp-top"><span class="exp-index"></span></div><h3>MEXC</h3><p class="exp-summary">Partnerships, social media, community & builder growth.</p><div class="role-chips"><span>BD KOL & Partnership</span><span>Social Media Specialist</span><span>MEXC Builder</span><span>Community Specialist</span></div></article>
-    <article class="exp-card"><div class="exp-top"><span class="exp-index"></span></div><h3>HedgePay</h3><p class="exp-summary">UI/UX design and community growth.</p><div class="role-label">UI / UX Design · Community Manager</div></article>
-    <article class="exp-card"><div class="exp-top"><span class="exp-index"></span></div><h3>ZCLUE TOKEN</h3><p class="exp-summary">Community management, education & engagement.</p><div class="role-label">Community Manager</div></article>
+    <article class="exp-card featured"><div class="exp-top"><span class="exp-index">01</span></div><h3>Airdrop One</h3><p class="exp-summary">Founder focused on Web3 community development.</p><div class="role-label">Founder · Community Development</div></article>
+    <article class="exp-card"><div class="exp-top"><span class="exp-index">02</span></div><h3>Bitget Wallet</h3><p class="exp-summary">Community, education, social media & creator leadership.</p><div class="role-chips"><span>Streamer Leader</span><span>Social Media Manager</span><span>SEA Teacher Leader</span><span>KOC Manager</span></div></article>
+    <article class="exp-card"><div class="exp-top"><span class="exp-index">03</span></div><h3>MEXC</h3><p class="exp-summary">Partnerships, social media, community & builder growth.</p><div class="role-chips"><span>BD KOL & Partnership</span><span>Social Media Specialist</span><span>MEXC Builder</span><span>Community Specialist</span></div></article>
+    <article class="exp-card"><div class="exp-top"><span class="exp-index">04</span></div><h3>HedgePay</h3><p class="exp-summary">UI/UX design and community growth.</p><div class="role-label">UI / UX Design · Community Manager</div></article>
+    <article class="exp-card"><div class="exp-top"><span class="exp-index">05</span></div><h3>ZCLUE TOKEN</h3><p class="exp-summary">Community management, education & engagement.</p><div class="role-label">Community Manager</div></article>
   </div>
 </section>
 
@@ -130,10 +387,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px
 <section id="social" class="container reveal">
   <div class="section-head"><div><div class="eyebrow">06 / Social Media</div><h2>Follow the<br>next move.</h2></div><p>Connect with KING FERDI across your preferred platforms.</p></div>
   <div class="socials">
-    <a class="social" href="#"><b>Instagram ↗</b><small>@yourusername</small></a>
-    <a class="social" href="https://www.tiktok.com/@kingferdi?_r=1&_t=ZS-99gLRIgByeg"><b>TikTok ↗</b><small>@kingferdi</small></a>
-    <a class="social" href="https://x.com/own_airdropone"><b>X / Twitter ↗</b><small>@own_airdropone</small></a>
-    <a class="social" href="https://www.linkedin.com/in/ferdi-nan-b09a33222?utm_source=share_via&utm_content=profile&utm_medium=member_android"><b>LinkedIn ↗</b><small>KING FERDI</small></a>
+    <a class="social" href="#contact"><b>Instagram ↗</b><small>Coming soon</small></a>
+    <a class="social" href="https://www.tiktok.com/@kingferdi" target="_blank" rel="noopener noreferrer"><b>TikTok ↗</b><small>@kingferdi</small></a>
+    <a class="social" href="#contact"><b>X / Twitter ↗</b><small>Coming soon</small></a>
+    <a class="social" href="https://www.linkedin.com/in/ferdi-nan-b09a33222" target="_blank" rel="noopener noreferrer"><b>LinkedIn ↗</b><small>KING FERDI</small></a>
   </div>
 </section>
 
@@ -148,9 +405,47 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targe
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 </script>
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
-<a href="https://www.linkedin.com/in/ferdi-nan-b09a33222" target="_blank" rel="noopener noreferrer" aria-label="KING FERDI on LinkedIn">LinkedIn ↗</a>
-<a href="https://www.tiktok.com/@kingferdi" target="_blank" rel="noopener noreferrer" aria-label="KING FERDI on TikTok">TikTok ↗</a>
-</div>
+
+<!-- Floating section navigation -->
+<nav class="floating-nav" aria-label="Section navigation">
+  <div class="floating-links">
+    <a class="floating-link" href="#about"><span>About</span><span>01</span></a>
+    <a class="floating-link" href="#experience"><span>Experience</span><span>02</span></a>
+    <a class="floating-link" href="#portfolio"><span>Portfolio</span><span>03</span></a>
+    <a class="floating-link" href="#skills"><span>Skills</span><span>04</span></a>
+    <a class="floating-link" href="#contact"><span>Contact</span><span>05</span></a>
+  </div>
+  <button class="floating-toggle" type="button" aria-expanded="false" aria-label="Open section navigation">
+    <span class="menu-icon">☰</span>
+    <span class="close-icon">×</span>
+  </button>
+</nav>
+
+<script>
+(function(){
+  const nav=document.querySelector('.floating-nav');
+  const toggle=nav && nav.querySelector('.floating-toggle');
+  const links=nav && nav.querySelectorAll('.floating-link');
+  if(!nav || !toggle) return;
+
+  function setOpen(open){
+    nav.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close section navigation':'Open section navigation');
+  }
+  toggle.addEventListener('click',function(){
+    setOpen(!nav.classList.contains('open'));
+  });
+  links.forEach(function(link){
+    link.addEventListener('click',function(){ setOpen(false); });
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') setOpen(false);
+  });
+})();
+</script>
 </body>
 </html>
