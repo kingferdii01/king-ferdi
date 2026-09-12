@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070707">
+<meta name="description" content="KING FERDI — Web3 Community, Content & Partnerships.">
+<title>KING FERDI — Web3 Professional | Community, Content & Growth</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{
+ --bg:#070707;--surface:#0d0d0e;--surface2:#111113;--text:#f5f5f2;--muted:#96969d;
+ --line:#242428;--accent:#b7ff43;--accent2:#7c5cff;--max:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 70%);z-index:-1}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),90%);margin:auto}
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,92%);z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 20px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(8,8,9,.76);backdrop-filter:blur(20px)}
+.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:.08em}.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;font-size:13px;color:#b8b8bd}.navlinks a:hover{color:#fff}
+.navcta{background:#fff;color:#000;padding:9px 15px;border-radius:999px;font-size:12px;font-weight:700}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:7%;padding:150px 0 90px}
+.kicker{display:inline-flex;align-items:center;gap:9px;color:#c6c6ca;font-size:12px;text-transform:uppercase;letter-spacing:.16em;border:1px solid var(--line);padding:8px 12px;border-radius:999px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+h1{font-family:"Space Grotesk";font-size:clamp(58px,9vw,126px);line-height:.86;letter-spacing:-.075em;margin:25px 0}
+.gradient{background:linear-gradient(100deg,#fff 10%,#aaa 48%,#b7ff43 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:#a9a9ae;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 20px;border:1px solid #303035;border-radius:999px;font-size:13px;font-weight:700}.btn.primary{background:var(--accent);color:#090909;border-color:var(--accent)}
+.hero-photo{position:relative;max-width:460px;margin-left:auto}.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:30px;display:block;filter:grayscale(.15) contrast(1.03)}
+.hero-photo:before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid #303035;border-radius:30px;z-index:-1}.orb{position:absolute;width:180px;height:180px;border-radius:50%;right:-45px;bottom:-45px;background:radial-gradient(circle at 30% 30%,rgba(183,255,67,.8),rgba(124,92,255,.25) 45%,transparent 70%);filter:blur(8px);pointer-events:none}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;color:#777;font-size:11px;text-transform:uppercase;letter-spacing:.2em}.marquee-track{display:inline-block;animation:scroll 24s linear infinite}.marquee span{margin:0 25px;color:#aaa}@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:120px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.eyebrow{color:var(--accent);font:600 11px "Space Grotesk";letter-spacing:.2em;text-transform:uppercase}.section-head h2{font:600 clamp(38px,5vw,68px)/.95 "Space Grotesk";letter-spacing:-.055em;margin:10px 0 0}.section-head p{color:#89898f;max-width:420px;margin:0}
+.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:10%;align-items:start}.bigquote{font:500 clamp(30px,4vw,52px)/1.05 "Space Grotesk";letter-spacing:-.045em}.about-copy p{color:#a5a5ab;font-size:16px;line-height:1.85}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.stat{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:18px}.stat b{font:700 34px "Space Grotesk"}.stat small{display:block;color:#777;margin-top:5px}
+.timeline{border-left:1px solid #303035;margin-left:9px}.exp{position:relative;padding:0 0 45px 35px;display:grid;grid-template-columns:180px 1fr;gap:25px}.exp:before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:#aaa;border-radius:50%;box-shadow:0 0 0 5px var(--bg)}.exp .date{color:#777;font-size:12px;padding-top:4px}.exp h3{margin:0;font:600 24px "Space Grotesk"}.company{color:#b7ff43;font-size:13px;margin:4px 0 12px}.exp p{color:#94949a;margin:0;max-width:650px}.tagline{margin-top:12px;color:#d2d2d5;font-size:12px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{min-height:300px;border:1px solid var(--line);border-radius:24px;padding:25px;background:linear-gradient(145deg,#121214,#0b0b0c);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.project:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(124,92,255,.12);filter:blur(30px);right:-60px;top:-60px}.project:nth-child(2):after{background:rgba(183,255,67,.12)}.project:nth-child(3):after{background:rgba(0,180,255,.12)}.project .num{color:#666;font:700 12px "Space Grotesk"}.project h3{font:600 28px "Space Grotesk";margin:15px 0 8px}.project p{color:#888;font-size:14px}.project a{font-size:12px;font-weight:700;color:#ddd}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.content-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:#0c0c0e}.content-card h3{font:600 28px "Space Grotesk";margin:0 0 10px}.content-card p{color:#929298}.content-list{list-style:none;padding:0;margin:22px 0 0}.content-list li{padding:12px 0;border-top:1px solid var(--line);font-size:13px;color:#c3c3c7;display:flex;justify-content:space-between}.content-list span{color:#6f6f75}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{border:1px solid #303035;border-radius:999px;padding:12px 16px;color:#d1d1d4;font-size:13px;background:#0c0c0e}.skill strong{color:var(--accent);margin-right:7px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.social{border:1px solid var(--line);padding:22px;border-radius:18px;transition:.25s}.social:hover{transform:translateY(-4px);border-color:#555}.social b{font-family:"Space Grotesk";font-size:18px}.social small{display:block;color:#777;margin-top:5px}
+.contact{border:1px solid var(--line);border-radius:32px;padding:70px;position:relative;overflow:hidden;background:linear-gradient(130deg,#111113,#0b0b0c)}.contact:after{content:"";position:absolute;width:400px;height:400px;right:-180px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(183,255,67,.16),transparent 65%)}.contact h2{font:600 clamp(48px,8vw,96px)/.9 "Space Grotesk";letter-spacing:-.065em;max-width:800px;margin:12px 0 25px}.contact p{color:#888;max-width:550px}.email{display:inline-block;margin-top:20px;font:600 18px "Space Grotesk";border-bottom:1px solid #555;padding-bottom:6px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:130px}.hero-photo{margin:30px auto 0}.about-grid,.content-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.socials{grid-template-columns:1fr 1fr}.exp{grid-template-columns:1fr;gap:5px}.section-head{display:block}.section-head p{margin-top:18px}.contact{padding:42px 25px}.stats{grid-template-columns:1fr}.hero p{font-size:16px}}
+</style>
+<meta name="description" content="KING FERDI — Web3 professional specializing in community, content, social media, partnerships, and Web3 growth.">
+<meta name="keywords" content="KING FERDI, Web3, crypto, blockchain, community manager, social media, content creator, KOL partnership, Web3 Indonesia">
+<meta name="author" content="KING FERDI">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#090a0b">
+<link rel="canonical" href="https://kingferdi.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KING FERDI — Web3 Professional">
+<meta property="og:description" content="Web3 professional portfolio — community, content, social media, partnerships & growth.">
+<meta property="og:url" content="https://kingferdi.vercel.app/">
+<meta property="og:site_name" content="KING FERDI">
+<meta property="og:image" content="https://kingferdi.vercel.app/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KING FERDI — Web3 Professional">
+<meta name="twitter:description" content="Web3 professional portfolio — community, content, social media, partnerships & growth.">
+<meta name="twitter:image" content="https://kingferdi.vercel.app/og-image.svg">
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#top">KING <span>FERDI</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#portfolio">Portfolio</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <a class="navcta" href="#contact">Let's Talk</a>
+</nav>
+
+<main id="top">
+<section class="hero container">
+  <div class="reveal">
+    <div class="kicker"><i class="dot"></i> Web3 Community & Content</div>
+    <h1>Building<br><span class="gradient">Web3 culture.</span></h1>
+    <p>I’m <strong>KING FERDI</strong> — a Web3 community builder, content strategist, social media specialist, KOL partnership professional and educator focused on turning complex ideas into engaging experiences.</p>
+    <div class="actions"><a class="btn primary" href="#portfolio">Explore My Work ↗</a><a class="btn" href="#experience">View Experience</a></div>
+  </div>
+  <div class="hero-photo reveal"><img src="profile.jpg" alt="KING FERDI profile photo"><div class="orb"></div></div>
+</section>
+
+<div class="marquee"><div class="marquee-track">WEB3 <span>✦</span> COMMUNITY <span>✦</span> CONTENT <span>✦</span> PARTNERSHIPS <span>✦</span> EDUCATION <span>✦</span> SOCIAL MEDIA <span>✦</span> WEB3 <span>✦</span> COMMUNITY <span>✦</span> CONTENT <span>✦</span> PARTNERSHIPS <span>✦</span> EDUCATION <span>✦</span> SOCIAL MEDIA <span>✦</span></div></div>
+
+<section id="about" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">01 / About Me</div><h2>More than a<br>Web3 profile.</h2></div><p>A multidisciplinary operator connecting community, content, creators and partnerships.</p></div>
+  <div class="about-grid">
+    <div class="bigquote">“Make Web3 easier to understand, easier to join, and more human.”</div>
+    <div class="about-copy"><p>My work sits at the intersection of community building, education, social media, creator ecosystems and business partnerships. I enjoy finding the signal in fast-moving Web3 trends and translating it into content and initiatives people can actually use.</p><p>From leading streams and educational programs to managing social channels, KOL relationships and communities, I build with a strong focus on communication, growth and long-term engagement.</p>
+      <div class="stats"><div class="stat"><b>Web3</b><small>Core ecosystem</small></div><div class="stat"><b>SEA</b><small>Regional focus</small></div><div class="stat"><b>360°</b><small>Community + content</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">02 / Experience</div><h2>Experience that<br>moves communities.</h2></div><p>Selected roles across Web3 companies, communities, content and partnerships.</p></div>
+  <div class="timeline">
+    <article class="exp"><div class="date">OCT 2025 — PRESENT</div><div><h3>Streamer Leader</h3><div class="company">Bitget Wallet</div><p>Creating interactive streams and educational content to support new users and the Web3 community.</p><div class="tagline">Team Leadership · Business Analysis</div></div></article>
+    <article class="exp"><div class="date">NOV 2024 — PRESENT</div><div><h3>Social Media Manager</h3><div class="company">Bitget Wallet</div><p>Sharing Web3 knowledge worldwide through articles, social posts and educational content.</p><div class="tagline">Research & Trend Awareness · User Education</div></div></article>
+    <article class="exp"><div class="date">AUG 2023 — PRESENT</div><div><h3>SEA Teacher Leader</h3><div class="company">Bitget Wallet</div><p>Leading education and community initiatives across Southeast Asia.</p><div class="tagline">Trend Analysis · Strategic Content Development</div></div></article>
+    <article class="exp"><div class="date">JUL 2026 — PRESENT</div><div><h3>KOC Manager</h3><div class="company">Bitget Wallet</div><p>Managing KOC initiatives and creator-focused activities within the Web3 ecosystem.</p></div></article>
+    <article class="exp"><div class="date">AUG 2025 — PRESENT</div><div><h3>BD KOL & Partnership</h3><div class="company">MEXC.com</div><p>Building strategic collaborations, expanding business networks and driving partnership growth.</p><div class="tagline">Strategic Partnerships · Communication & Networking</div></div></article>
+    <article class="exp"><div class="date">MAR 2025 — PRESENT</div><div><h3>Social Media Specialist</h3><div class="company">MEXC.com</div><p>Managing content strategies, boosting engagement and enhancing brand presence.</p><div class="tagline">Social Media Analytics · SMO</div></div></article>
+    <article class="exp"><div class="date">NOV 2025 — PRESENT</div><div><h3>MEXC Builder</h3><div class="company">MEXC.com</div><p>Collaborating with communities and local or regional influencers to expand reach.</p><div class="tagline">Business Analysis · Marketing Strategy</div></div></article>
+    <article class="exp"><div class="date">JAN 2018 — PRESENT</div><div><h3>Founder</h3><div class="company">Airdrop One</div><p>Building and developing a community-focused initiative in the Web3 ecosystem.</p><div class="tagline">Community Development</div></div></article>
+    <article class="exp"><div class="date">AUG 2025 — DEC 2025</div><div><h3>Community Manager</h3><div class="company">ZCLUE TOKEN</div><p>Crypto education, engagement and community development for a strong, informed and inclusive Web3 environment.</p></div></article>
+    <article class="exp"><div class="date">OCT 2021 — JAN 2023</div><div><h3>UI / UX Design · Community Manager</h3><div class="company">HedgePay</div><p>Creating UI/UX for mobile applications and websites while growing the community.</p><div class="tagline">Graphic Design · Web Design · Community Building</div></div></article>
+  </div>
+</section>
+
+<section id="portfolio" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">03 / Web3 Portfolio</div><h2>Where strategy<br>meets execution.</h2></div><p>A flexible portfolio for projects, campaigns, communities and creator initiatives.</p></div>
+  <div class="portfolio">
+    <article class="project"><div><div class="num">01</div><h3>Web3 Education</h3><p>Educational streams, articles and simplified content designed to make Web3 more accessible.</p></div><a href="#contact">Discuss a collaboration ↗</a></article>
+    <article class="project"><div><div class="num">02</div><h3>Community Growth</h3><p>Community development, engagement, moderation and retention strategies across Web3 ecosystems.</p></div><a href="#contact">Build together ↗</a></article>
+    <article class="project"><div><div class="num">03</div><h3>KOL & KOC Network</h3><p>Creator partnerships and strategic collaborations connecting brands with relevant communities.</p></div><a href="#contact">Start a partnership ↗</a></article>
+  </div>
+</section>
+
+<section id="content" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">04 / Community & Content</div><h2>Ideas become<br>communities.</h2></div><p>Content is the bridge between a product and the people who believe in it.</p></div>
+  <div class="content-grid">
+    <article class="content-card"><h3>Content Strategy</h3><p>Research-driven storytelling across social posts, educational material, livestreams and Web3 campaigns.</p><ul class="content-list"><li>Trend & market research <span>01</span></li><li>Educational storytelling <span>02</span></li><li>Social media optimization <span>03</span></li></ul></article>
+    <article class="content-card"><h3>Community Building</h3><p>Creating informed, engaged communities through clear communication, moderation and meaningful initiatives.</p><ul class="content-list"><li>Community engagement <span>01</span></li><li>Growth & retention <span>02</span></li><li>Regional community programs <span>03</span></li></ul></article>
+  </div>
+</section>
+
+<section id="skills" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">05 / Skills</div><h2>A toolkit built<br>for Web3.</h2></div><p>Core capabilities gathered from community, content, design and partnership work.</p></div>
+  <div class="skills">
+    <div class="skill"><strong>01</strong> Community Development</div><div class="skill"><strong>02</strong> Community Building</div><div class="skill"><strong>03</strong> Social Media Management</div><div class="skill"><strong>04</strong> Content Strategy</div><div class="skill"><strong>05</strong> Strategic Partnerships</div><div class="skill"><strong>06</strong> KOL & KOC Management</div><div class="skill"><strong>07</strong> Trend Analysis</div><div class="skill"><strong>08</strong> User Education</div><div class="skill"><strong>09</strong> Marketing Strategy</div><div class="skill"><strong>10</strong> Graphic Design</div><div class="skill"><strong>11</strong> Web Design</div><div class="skill"><strong>12</strong> Communication & Networking</div>
+  </div>
+</section>
+
+<section id="social" class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">06 / Social Media</div><h2>Follow the<br>next move.</h2></div><p>Connect with KING FERDI across your preferred platforms.</p></div>
+  <div class="socials">
+    <a class="social" href="#"><b>Instagram ↗</b><small>@yourusername</small></a>
+    <a class="social" href="#"><b>TikTok ↗</b><small>@yourusername</small></a>
+    <a class="social" href="#"><b>X / Twitter ↗</b><small>@yourusername</small></a>
+    <a class="social" href="#"><b>LinkedIn ↗</b><small>KING FERDI</small></a>
+  </div>
+</section>
+
+<section id="contact" class="container reveal">
+  <div class="contact"><div class="eyebrow">07 / Contact</div><h2>Have an idea?<br>Let’s build it.</h2><p>For Web3 partnerships, community initiatives, creator collaborations, content campaigns or other opportunities, get in touch.</p><a class="email" href="mailto:fatsvianzo40@gmail.com">fatsvianzo40@gmail.com ↗</a></div>
+</section>
+</main>
+
+<footer class="container"><span>© 2026 KING FERDI</span><span>Web3 Community · Content · Partnerships</span></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+<a href="https://www.linkedin.com/in/ferdi-nan-b09a33222" target="_blank" rel="noopener noreferrer" aria-label="KING FERDI on LinkedIn">LinkedIn ↗</a>
+<a href="https://www.tiktok.com/@kingferdi" target="_blank" rel="noopener noreferrer" aria-label="KING FERDI on TikTok">TikTok ↗</a>
+</div>
+</body>
+</html>
